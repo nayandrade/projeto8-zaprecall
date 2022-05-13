@@ -141,25 +141,67 @@ footer span {
     color: #333333;
 }
 
-.card-question {
+.card-front,
+.card-back {
     font-family: 'Recursive', sans-serif;
     background-color: #FFFFD4;
     font-size: 18px;
     font-weight: 400;
     border-radius: 5px;
     width: 82%;
-    height: 131px;
+    height: 150px;
     display: flex;
-    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3%;
     position: relative;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    margin: 20px 0;
 }
 
-.card-question ion-icon {
+.card-front ion-icon,
+.card-back ion icon {
     color: #333333;
     position: absolute;
     bottom: 5px;
     right: 10px;
     font-size: 30px;    
     transform: rotate(90deg) rotateY(60deg) rotateX(180deg);
+}
+
+.card-front > div,
+.card-back > div {
+    display: flex;
+    align-items: center;
+    text-justify: center;
+    justify-content: space-between;
+}
+
+.resposta {
+    font-family: 'Recursive', sans-serif;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 86px;
+    height: 38px;
+    border-radius: 5px;
+}
+
+.red {
+    background-color: #FF3030;
+    
+}
+.orange {
+    background-color: #FF922E;
+    
+
+}
+.green {
+    background-color: #2FBE34;
+    
+
 }

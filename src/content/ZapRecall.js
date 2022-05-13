@@ -1,32 +1,8 @@
 import React from "react";
+import Cards from "./Cards";
 
-function choseQuestion(index) {
-    console.log('escolhi', index)
-}
 
-function answerQuestion(index) {
-    console.log('responder', index)
-}
-
-function Card (props) {
-    return (
-        <>
-        <div className="card">
-            <span>Pergunta {props.index}</span>
-            <ion-icon name="play-outline" onClick={() => choseQuestion(props.index)}></ion-icon>
-        </div>
-        <div className="card-question">
-            <span>{props.question}</span>
-            <ion-icon name="reload-outline" onClick={() => answerQuestion(props.index)}></ion-icon>
-        </div>
-
-        </>
-        
-        
-    )
-}
-
-export default function ZapRecall () {
+export default function ZapRecall () {    
     
     const item = [{
         question: "O que é JSX?", 
@@ -40,23 +16,22 @@ export default function ZapRecall () {
     },{
         question: "Podemos colocar __ dentro do JSX", 
         answer: 'expressões',
-    }
-    //,{
-    //     question: "O ReactDOM nos ajuda __", 
-    //     answer: 'interagindo com a DOM para colocar componentes React na mesma',
-    // },{
-    //     question: "Usamos o npm para __", 
-    //     answer: 'gerenciar os pacotes necessários e suas dependências',
-    // },{
-    //     question: "Usamos props para __", 
-    //     answer: 'passar diferentes informações para componentes',
-    // },{
-    //     question: "Usamos estado (state) para __", 
-    //     answer: 'dizer para o React quais informações quando atualizadas devem renderizar a tela novamente',
-    // }
-];  
-   
-    
+    },{
+        question: "O ReactDOM nos ajuda __", 
+        answer: 'interagindo com a DOM para colocar componentes React na mesma',
+    },{
+        question: "Usamos o npm para __", 
+        answer: 'gerenciar os pacotes necessários e suas dependências',
+    },{
+        question: "Usamos props para __", 
+        answer: 'passar diferentes informações para componentes',
+    },{
+        question: "Usamos estado (state) para __", 
+        answer: 'dizer para o React quais informações quando atualizadas devem renderizar a tela novamente',
+    }];  
+
+    item.sort( () => Math.random() - 0.5);
+           
     return (
         <>
         <header>
@@ -66,7 +41,7 @@ export default function ZapRecall () {
         <div className="zap">
             <div className="cards">
                 {item.map((item, index) => (
-                    <Card                    
+                    <Cards                    
                     key={index}
                     index={index + 1}
                     question={item.question}
