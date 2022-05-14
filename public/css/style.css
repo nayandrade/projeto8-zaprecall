@@ -74,6 +74,7 @@ footer span {
     width: 136px;
     height: 161px;
     margin-bottom: 13px;
+    border-radius: 50% 0 50% 0;  
 }
 
 .initial span {
@@ -196,16 +197,25 @@ footer span {
 }
 
 .red {
-    background-color: #FF3030;
-    
+    background-color: #FF3030;    
 }
 .orange {
-    background-color: #FF922E;
-    
-
+    background-color: #FF922E;  
 }
 .green {
-    background-color: #2FBE34;
-    
+    background-color: #2FBE34;   
+}
 
+.nao-lembrei,
+.nao-lembrei ion-icon {
+    color: #FF3030;  
+}
+
+.quase,
+.quase ion-icon {
+    color: #FF922E;  
+}
+.zapei,
+.zapei ion-icon {
+    color: #2FBE34;   
 }

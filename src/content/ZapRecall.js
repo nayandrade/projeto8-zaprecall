@@ -1,5 +1,6 @@
 import React from "react";
 import Cards from "./Cards";
+import Footer from "./Footer";
 
 
 export default function ZapRecall () {   
@@ -46,14 +47,17 @@ export default function ZapRecall () {
                     key={index}
                     index={index + 1}
                     question={item.question}
-                    answer={item.answer}                    
+                    answer={item.answer}
+                    questoes={item.length}                    
                     />
                 ))}                
             </div>
         </div>
-        <footer>
-            <span>{x}/{item.length} CONCLUÍDOS</span>
-        </footer>  
+        <Footer 
+        respondidas={0}
+        length={item.length} 
+        />
+         
         </>
               
     )

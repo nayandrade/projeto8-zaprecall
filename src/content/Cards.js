@@ -1,4 +1,5 @@
 import React from "react"
+import Buttons from "./Buttons";
 
 export default function Cards (props) {
     const [fase, setFase] = React.useState('fase1');
@@ -18,15 +19,20 @@ export default function Cards (props) {
             <div className="card-back">
                 <span>{props.answer}</span>
                 <div>
-                    <div className="resposta red" onClick={() => setFase('fase4')}>Não Lembrei</div>
-                    <div className="resposta orange" onClick={() => setFase('fase4')}>Quase não Lembrei</div>
-                    <div className="resposta green" onClick={() => setFase('fase4')}>Zap!</div>
+                    <div className="resposta red" onClick={() => setFase('nao-lembrei')}>Não Lembrei</div>
+                    <div className="resposta orange" onClick={() => setFase('quase')}>Quase não Lembrei</div>
+                    <div className="resposta green" onClick={() => setFase('zapei')}>Zap!</div>
                 </div>
             </div> :
-            <div className="card card-finalizado">
-                <span>Pergunta {props.index}</span>                
+            <div className={`card card-finalizado ${fase}`}>
+                <span>Pergunta {props.index}</span>
+                {
+                    fase === 'nao-lembrei' ? <ion-icon name="close-circle" class={`md hydrated ${fase}`}></ion-icon> : fase === 'quase' ? 
+                    <ion-icon name="help-circle" className={fase}></ion-icon> : <ion-icon name="checkmark-circle" className={fase}></ion-icon>
+                }                
             </div>            
-        }    
+        }
+          
         </>     
     )
 }
