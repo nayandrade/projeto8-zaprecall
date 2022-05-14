@@ -2,7 +2,8 @@ import React from "react";
 import Cards from "./Cards";
 
 
-export default function ZapRecall () {    
+export default function ZapRecall () {   
+    let x = 0 
     
     const item = [{
         question: "O que é JSX?", 
@@ -51,7 +52,7 @@ export default function ZapRecall () {
             </div>
         </div>
         <footer>
-            <span>0/0 CONCLUÍDOS</span>
+            <span>{x}/{item.length} CONCLUÍDOS</span>
         </footer>  
         </>
               

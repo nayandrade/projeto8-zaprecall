@@ -191,6 +191,10 @@ footer span {
     border-radius: 5px;
 }
 
+.card-finalizado {
+    text-decoration: line-through;
+}
+
 .red {
     background-color: #FF3030;
     
