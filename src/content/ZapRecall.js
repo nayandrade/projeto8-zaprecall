@@ -1,6 +1,7 @@
 import React from "react";
 import Cards from "./Cards";
 import Footer from "./Footer";
+import logo from "../assets/img/zap1.svg"
 
 
 export default function ZapRecall () {   
@@ -37,7 +38,7 @@ export default function ZapRecall () {
     return (
         <>
         <header>
-            <img src="./assets/img/zap1.svg" alt="Logo icon" />
+            <img src={logo} alt="Logo icon" />
             <span>ZapRecall</span>
         </header>
         <div className="zap">
