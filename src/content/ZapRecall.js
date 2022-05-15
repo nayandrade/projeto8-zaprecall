@@ -2,11 +2,11 @@ import React from "react";
 import Cards from "./Cards";
 import Footer from "./Footer";
 import logo from "../assets/img/zap1.svg"
-
-
-export default function ZapRecall () {   
-    let x = 0 
-    
+ 
+export default function ZapRecall () {
+    const [complete, setComplete] = React.useState(0)
+    const [icon, setIcon] = React.useState([])
+        
     const item = [{
         question: "O que é JSX?", 
         answer: 'Uma extensão de linguagem do JavaScript',
@@ -43,22 +43,23 @@ export default function ZapRecall () {
         </header>
         <div className="zap">
             <div className="cards">
-                {item.map((item, index) => (
+                {
+                item.map((item, index) => (
                     <Cards                    
-                    key={index}
-                    i={index}
                     index={index + 1}
                     question={item.question}
                     answer={item.answer}
-                    questoes={item.length}
-                    item={item}                     
-                    />
-                ))}                
+                    complete={complete}
+                    setComplete={setComplete}
+                    icon={icon}
+                    setIcon={setIcon}                     
+                    />))}                
             </div>
         </div>
         <Footer 
-        respondidas={0}
-        length={item.length} 
+        length={item.length}
+        complete={complete}
+        icon={icon} 
         />
          
         </>
