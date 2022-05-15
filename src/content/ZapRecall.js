@@ -46,10 +46,12 @@ export default function ZapRecall () {
                 {item.map((item, index) => (
                     <Cards                    
                     key={index}
+                    i={index}
                     index={index + 1}
                     question={item.question}
                     answer={item.answer}
-                    questoes={item.length}                    
+                    questoes={item.length}
+                    item={item}                     
                     />
                 ))}                
             </div>
