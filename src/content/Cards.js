@@ -23,7 +23,5 @@ export default function Cards ( {index, question, answer, complete, setComplete,
         }         
         </>
     )
-    
-
 }
  
