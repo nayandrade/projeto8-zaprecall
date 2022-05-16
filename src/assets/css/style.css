@@ -218,16 +218,19 @@ footer span {
 
 .erro,
 .erro ion-icon {
-    color: #FF3030;  
+    color: #FF3030;
+    text-decoration: line-through;  
 }
 
 .quase,
 .quase ion-icon {
-    color: #FF922E;  
+    color: #FF922E;
+    text-decoration: line-through;  
 }
 .zapei,
 .zapei ion-icon {
-    color: #2FBE34;   
+    color: #2FBE34;
+    text-decoration: line-through;   
 }
 
 .bottom, 

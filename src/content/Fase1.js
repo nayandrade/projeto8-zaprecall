@@ -11,4 +11,4 @@ export default function Fase1 ( {index, setFase, type }) {
         </div>
     )
 }
-
+                                                  

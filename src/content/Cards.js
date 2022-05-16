@@ -3,7 +3,7 @@ import Fase1 from "./Fase1";
 import Fase2 from "./Fase2";
 import Fase3 from "./Fase3";
 
-export default function Cards ( {index, question, answer, complete, setComplete, icon, setIcon}) {
+export default function Cards ( {index, question, answer, complete, setComplete, icon, setIcon} ) {
     const [fase, setFase] = React.useState('fase1');
     const [type, setType] = React.useState("")   
     return (
