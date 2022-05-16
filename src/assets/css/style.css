@@ -106,6 +106,7 @@ footer span {
     border: 1px solid #D70900;
     border-radius: 5px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
 .zap {
@@ -146,6 +147,7 @@ footer span {
     color: #333333;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     margin: 12.5px;
+    cursor: pointer;
 }
 
 .card ion-icon {
@@ -169,6 +171,7 @@ footer span {
     position: relative;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     margin: 20px 0;
+    cursor: pointer;
 }
 
 .card-front img {
@@ -184,6 +187,7 @@ footer span {
     align-items: center;
     text-justify: center;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .resposta {
